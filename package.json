@@ -33,6 +33,7 @@
     "gulp-plumber": "^1.1.0",
     "gulp-print": "^2.0.1",
     "gulp-util": "^3.0.8",
+    "lodash": "~4.17.2",
     "gulp-webserver": "^0.9.1",
     "jshint": "^2.9.4",
     "wiredep": "^4.0.0",
