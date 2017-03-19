@@ -18,6 +18,7 @@ var lessFolder = './less';
  */
 exports.paths = {
   temp:temp,
+  css:temp+'/*.css',
   watchLess:[
     lessFolder + '/main.less', //creating less files for each page
     lessFolder + '/pages/*.less' //creating less files for each page
@@ -27,10 +28,11 @@ exports.paths = {
     lessFolder + '/main.less' //creating less files for each page
   ],
   src: 'src',
+  main:'',
   dist: 'release',
   devDist: 'dev-release',
   tmp: '.tmp',
-  htmlFiles:['index.html'],
+  htmlFiles:'index.html',
   e2e: 'e2e',
   js:[
     clientApp + '**/*.module.js',

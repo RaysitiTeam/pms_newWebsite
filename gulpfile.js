@@ -2,7 +2,10 @@ var gulp = require('gulp');
 var args = require('yargs').argv;
 var del = require('del');
 var $ = require('gulp-load-plugins')({lazy:true});
+//Importing Gulp tasks & variables
 var config = require('./gulp/config'); // without the ./ it will look for a PACKAGE named,() to run function
+require('./gulp/inject');
+require('./gulp/server');
 
 var jsSources = config.alljs;
 
@@ -36,10 +39,6 @@ gulp.task('clean-styles',function(){
   clean(files);
 });//end:clean-styles
 
-gulp.task('less-watcher',['styles'], function(){
-  gulp.watch([config.paths.watchLess],['styles']); // 2 param arrays - source array and task array
-});//end:less-watcher
-
 gulp.task('wiredep',function(){
   var options = config.getWiredepDefaultOptions(); //TODO: configure getWiredepDefaultOptions
   var wiredep = require('wiredep').stream; // that is going to get the stream
@@ -49,26 +48,6 @@ gulp.task('wiredep',function(){
     // .pipe($.inject(gulp.src(config.js))) //this will use gulp-inject and inject files
     .pipe(gulp.dest(config.paths.client));
 });//end:wiredep
-
-gulp.task('inject',['styles'],function(){
-  return gulp
-    .src(config.paths.htmlFiles)
-    .pipe($.inject(gulp.src(config.paths.css))) //this will use gulp-inject and inject files
-    .pipe(gulp.dest(config.paths.client));
-});//end:inject
-
-
-gulp.task('serve-dev',['inject'],function() {
-  log('Serving the application on port: ' + config.port);
-  return gulp
-  .src('.')
-    .pipe($.webserver({
-      livereload: true,
-      directoryListing: true,
-      port:config.port,
-      open: config.urlPath // OR just set open to true
-    }));
-});//end:serve-dev
 
 /**
  *  Default task clean temporaries directories and launch the

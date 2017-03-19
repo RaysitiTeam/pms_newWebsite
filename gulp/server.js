@@ -15,10 +15,7 @@ function browserSyncInit(baseDir, browser) {
   browser = browser === undefined ? 'default' : browser;
 
   var routes = null;
-  if(baseDir === conf.paths.src || (util.isArray(baseDir) && baseDir.indexOf(conf.paths.src) !== -1)) {
-    routes = {
-      '/bower_components': 'bower_components'
-    };
+  if(baseDir === conf.paths.main || (util.isArray(baseDir) && baseDir.indexOf(conf.paths.main) !== -1)) {
   }
 
   var server = {
@@ -43,13 +40,20 @@ function browserSyncInit(baseDir, browser) {
   });
 }
 
-browserSync.use(browserSyncSpa({
-  selector: '[ng-app]'// Only needed for angular apps
-}));
+// browserSync.use(browserSyncSpa({
+//   selector: '[ng-app]'// Only needed for angular apps
+// }));
 
 gulp.task('serve', ['watch'], function () {
-  browserSyncInit([path.join(conf.paths.tmp, '/serve'), conf.paths.src]);
+  browserSyncInit(conf.paths.main);
 });
+
+gulp.task('watch',['styles'], function(){
+  gulp.watch([conf.paths.watchLess],['styles']); // 2 param arrays - source array and task array
+  gulp.watch(path.join(conf.paths.css), function(event) {
+    browserSync.reload(event.path);
+  });
+});//end:less-watcher
 
 gulp.task('serve:dist', ['build'], function () {
   browserSyncInit(conf.paths.dist);
