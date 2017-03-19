@@ -26,7 +26,7 @@ gulp.task('styles',['clean-styles','wiredep'],function(){
   .pipe($.less())
   .on('error',errorLogger) //On error - defer to errorLogger function
   .pipe($.autoprefixer({browsers:['last 2 version', '>5%']})) // autoprefixer - browsers in the market
-  // .pipe($.plumber()) // This is another type of error handling
+  .pipe($.plumber()) // This is another type of error handling
   .pipe(gulp.dest(config.paths.temp)); //TODO :add the property to gulp.config.js
 });//end:styles
 
@@ -36,8 +36,8 @@ gulp.task('clean-styles',function(){
   clean(files);
 });//end:clean-styles
 
-gulp.task('less-watcher', function(){
-  gulp.watch([config.less],['styles']); // 2 param arrays - source array and task array
+gulp.task('less-watcher',['styles'], function(){
+  gulp.watch([config.paths.watchLess],['styles']); // 2 param arrays - source array and task array
 });//end:less-watcher
 
 gulp.task('wiredep',function(){

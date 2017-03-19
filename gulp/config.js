@@ -10,11 +10,22 @@ var gutil = require('gulp-util');
 
 var client = './';
 var clientApp = './src/app';
+var temp = './.tmp';
+var lessFolder = './less';
 
 /**
  *  The main paths of your project handle these with care
  */
 exports.paths = {
+  temp:temp,
+  watchLess:[
+    lessFolder + '/main.less', //creating less files for each page
+    lessFolder + '/pages/*.less' //creating less files for each page
+  ],
+  less:[
+    // lessFolder + '/main/*.less', // main Bootswatch less files
+    lessFolder + '/main.less' //creating less files for each page
+  ],
   src: 'src',
   dist: 'release',
   devDist: 'dev-release',
