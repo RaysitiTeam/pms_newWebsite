@@ -5,6 +5,7 @@
 @import "pages/members.less";
 @import "pages/treatments.less";
 
+@theme-black-color: #222222;
 
 //main Website content CSS overwriting should come here
 
@@ -21,9 +22,38 @@ nav{
     height: 120px;
     background: white;
   }//end:navbar-logo
+
+  .navbar-avatar{
+    // border: 1px solid blue;
+    position: absolute;
+    left: 350px;
+    top:-9px;
+    width: 67px;
+    height: 70px;
+    background: white;
+  }//end:navbar-avatar
+
 }//end:nav
 
 .main-content{
-  margin: 100px auto;
-  border: 1px solid red;
+  // border: 1px solid red;
+  margin: 100px auto 0px;
+
+  //Border shadow for main-content
+  -webkit-box-shadow: 0px 6px 16px -1px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 6px 16px -1px rgba(0,0,0,0.33);
+  box-shadow: 0px 6px 16px -1px rgba(0,0,0,0.33);
 }
+
+footer.footer-section{
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  bottom: 0;
+  background: @theme-black-color;
+  text-align: center;
+  color: white;
+  p{
+    margin: 15px auto;
+  }
+}//end:footer
