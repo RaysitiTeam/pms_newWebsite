@@ -7,6 +7,12 @@
 @common-links-color: #E2E2E2;
 @common-nav-links-color: #AEAEAE; //main Website content CSS overwriting should come here
 
+//Common styles
+.center-div{
+  margin: 0px auto;
+  text-align: center;
+}//end:center-div
+
 nav {
     position: relative;
     top: 40px;
@@ -168,12 +174,23 @@ nav {
                     &:hover{
                       list-style: none;
                       background: @common-nav-links-color;
-                    }
+                    }//end:&:hover
                   }//end:a list
                 }//end:sidebar-list-items
             }//end:sidebar-list
         }//end:sidebar-navigation
     }//end:main-sidebar
+    .body-section{
+        text-align: center;
+      .dashboard-panels{
+          margin: 5px 4%;
+          height: 240px;
+          border: 3px solid black;
+          -webkit-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+          -moz-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+          box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+      }//end:dashboard-panels
+    }//end:body-section
 }//end:main-content
 
 footer.footer-section {
