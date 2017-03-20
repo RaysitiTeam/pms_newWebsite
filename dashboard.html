@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PMS Medical Website</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
+    <link rel="stylesheet" href="bower_components/angular-toastr/dist/angular-toastr.css" />
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+    <link rel="stylesheet" href="bower_components/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="bower_components/angular-progress-button-styles/dist/angular-progress-button-styles.min.css" />
+    <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css" />
+    <link rel="stylesheet" href="bower_components/morris.js/morris.css" />
+    <link rel="stylesheet" href="bower_components/ionrangeslider/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="bower_components/ionrangeslider/css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" href="bower_components/textAngular/dist/textAngular.css" />
+    <link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css" />
+    <link rel="stylesheet" href="bower_components/jstree/dist/themes/default/style.css" />
+    <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/.tmp/main.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+
+</head>
+
+<body>
+    <!-- navigation template -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- navbar-logo -->
+            <div class="navbar-logo"> <img src="images/pms_logo.png" alt="Website Logo"> </div>
+            <!-- end:navbar-logo-->
+            <div class="navbar-avatar">
+                <img src="images/avatar/doctor.png" alt="Doctor avatar">
+            </div>
+            <div class="navbar-avatar-title">
+                <p>Welcome Dr. Jack Shepherd</p>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gear Icon <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <!-- end:navigation template -->
+
+    <div class="main-content">
+        <div>
+            <aside class="col-lg-3 main-sidebar">
+                <div class="sidebar-header">
+                    <span class="menu-navigation-icon glyphicon glyphicon-align-justify"></span>Login/Dashboard
+                </div>
+                <div class="sidebar-navigation">
+                    <ul class="sidebar-list">
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-home"></span>
+                                <span class="sidebar-list-item-title">DASHBOARD</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-user"></span>
+                                <span class="sidebar-list-item-title">MEMBERS</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-leaf"></span>
+                                <span class="sidebar-list-item-title">TREATMENTS</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-picture"></span>
+                                <span class="sidebar-list-item-title">IMAGES</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-gift"></span>
+                                <span class="sidebar-list-item-title">BIRTHDAY REMINDERS</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-calendar"></span>
+                                <span class="sidebar-list-item-title">APPOINTMENTS</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-envelope"></span>
+                                <span class="sidebar-list-item-title">SEND EMAILS</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-list-items">
+                            <a href="#">
+                                <span class="sidebar-list-item-icon glyphicon glyphicon-comment"></span>
+                                <span class="sidebar-list-item-title">SEND SMS</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+            <section class="col-lg-9 container-fluid body-section">
+                <div class="col-lg-12 center-div">
+                  <!-- dashboard-panels -->
+                  <div class="col-md-2 dashboard-panels">
+                    <span class="dashboard-badge"></span>
+                    <div class="dashboard-header">
+                      <h4>MEMBERS:1920</h4>
+                    </div>
+                    <div class="dashboard-content">
+                      <p><strong>Detail:</strong> Detail 1 here</p>
+                      <p><strong>Detail:</strong> Detail 2 here</p>
+                      <p><strong>Detail:</strong> Detail 3 here</p>
+                      <p><strong>Detail:</strong> Detail 4 here</p>
+                    </div>
+                  </div><!-- end:dashboard-panels -->
+                  <!-- dashboard-panels -->
+                  <div class="col-md-2 dashboard-panels">
+                    <span class="dashboard-badge"></span>
+                    <div class="dashboard-header">
+                      <h4>MEMBERS:1920</h4>
+                    </div>
+                    <div class="dashboard-content">
+                      <p><strong>Detail:</strong> Detail 1 here</p>
+                      <p><strong>Detail:</strong> Detail 2 here</p>
+                      <p><strong>Detail:</strong> Detail 3 here</p>
+                      <p><strong>Detail:</strong> Detail 4 here</p>
+                    </div>
+                  </div><!-- end:dashboard-panels -->
+                  <!-- dashboard-panels -->
+                  <div class="col-md-2 dashboard-panels">
+                    <span class="dashboard-badge"></span>
+                    <div class="dashboard-header">
+                      <h4>MEMBERS:1920</h4>
+                    </div>
+                    <div class="dashboard-content">
+                      <p><strong>Detail:</strong> Detail 1 here</p>
+                      <p><strong>Detail:</strong> Detail 2 here</p>
+                      <p><strong>Detail:</strong> Detail 3 here</p>
+                      <p><strong>Detail:</strong> Detail 4 here</p>
+                    </div>
+                  </div><!-- end:dashboard-panels -->
+                  <!-- dashboard-panels -->
+                  <div class="col-md-2 dashboard-panels">
+                    <span class="dashboard-badge"></span>
+                    <div class="dashboard-header">
+                      <h4>MEMBERS:1920</h4>
+                    </div>
+                    <div class="dashboard-content">
+                      <p><strong>Detail:</strong> Detail 1 here</p>
+                      <p><strong>Detail:</strong> Detail 2 here</p>
+                      <p><strong>Detail:</strong> Detail 3 here</p>
+                      <p><strong>Detail:</strong> Detail 4 here</p>
+                    </div>
+                  </div><!-- end:dashboard-panels -->
+                </div>
+                <!-- end:dashboard-section -->
+                <div class="row">&nbsp;</div>
+                <div class="row">&nbsp;</div>
+                <!-- search-section -->
+                <div class="col-lg-12">
+                  <h3><strong>Search...</strong></h3>
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-8">
+                    <input type="text" class="form-control" placeholder="Seach Member ID"/>
+                  </div>
+                </div>
+                <!-- end:search-section -->
+            </section>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+        </div>
+        <div class="common-links">
+            <div class="common-nav-links">
+                <div class="col-lg-6 common-navigation-menu">
+                    <p>
+                        <ul>
+                            <li><span></span><a href="#">Patient's Birthdays</a></li>
+                            <li><span></span><a href="#">Calender</a></li>
+                            <li><span></span><a href="#">Notifications</a></li>
+                            <li><span></span><a href="#">Contacts</a></li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+    <footer class="container-fluid footer-section">
+        <p>&copy; Design by RAYSITI</p>
+    </footer>
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/slimScroll/jquery.slimscroll.js"></script>
+    <script src="bower_components/angular-slimscroll/angular-slimscroll.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
+    <script src="bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-sortable/sortable.js"></script>
+    <script src="bower_components/bootstrap/js/dropdown.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+    <script src="bower_components/bootstrap-switch/dist/js/bootstrap-switch.js"></script>
+    <script src="bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+    <script src="bower_components/leaflet/dist/leaflet-src.js"></script>
+    <script src="bower_components/angular-progress-button-styles/dist/angular-progress-button-styles.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="bower_components/chartist/dist/chartist.min.js"></script>
+    <script src="bower_components/angular-chartist.js/dist/angular-chartist.js"></script>
+    <script src="bower_components/eve-raphael/eve.js"></script>
+    <script src="bower_components/raphael/raphael.min.js"></script>
+    <script src="bower_components/mocha/mocha.js"></script>
+    <script src="bower_components/morris.js/morris.js"></script>
+    <script src="bower_components/angular-morris-chart/src/angular-morris-chart.min.js"></script>
+    <script src="bower_components/ionrangeslider/js/ion.rangeSlider.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/rangy/rangy-core.js"></script>
+    <script src="bower_components/rangy/rangy-classapplier.js"></script>
+    <script src="bower_components/rangy/rangy-highlighter.js"></script>
+    <script src="bower_components/rangy/rangy-selectionsaverestore.js"></script>
+    <script src="bower_components/rangy/rangy-serializer.js"></script>
+    <script src="bower_components/rangy/rangy-textrange.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular.js"></script>
+    <script src="bower_components/textAngular/dist/textAngular-sanitize.js"></script>
+    <script src="bower_components/textAngular/dist/textAngularSetup.js"></script>
+    <script src="bower_components/angular-xeditable/dist/js/xeditable.js"></script>
+    <script src="bower_components/jstree/dist/jstree.js"></script>
+    <script src="bower_components/ng-js-tree/dist/ngJsTree.js"></script>
+    <script src="bower_components/angular-ui-select/dist/select.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+</body>
+
+</html>
