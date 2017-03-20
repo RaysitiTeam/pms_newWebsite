@@ -53,6 +53,9 @@ gulp.task('watch',['styles'], function(){
   gulp.watch(path.join(conf.paths.css), function(event) {
     browserSync.reload(event.path);
   });
+  gulp.watch(path.join(conf.paths.htmlFiles), function(event) {
+    browserSync.reload(event.path);
+  });
 });//end:less-watcher
 
 gulp.task('serve:dist', ['build'], function () {

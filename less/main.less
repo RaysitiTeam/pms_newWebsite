@@ -3,9 +3,27 @@
 //CSS Styles for Each page
 @import "pages/dashboard.less";
 @import "pages/members.less";
+@import "pages/treatments.less";
 
 
 //main Website content CSS overwriting should come here
-// body{
-//   color:black;
-// }
+
+nav{
+  position:relative;
+  top:40px;
+
+  .navbar-logo{
+    // border: 1px solid red;
+    position: absolute;
+    top:-33px;
+    left: -1px;
+    width: 330px;
+    height: 120px;
+    background: white;
+  }//end:navbar-logo
+}//end:nav
+
+.main-content{
+  margin: 100px auto;
+  border: 1px solid red;
+}
