@@ -1,45 +1,31 @@
+@header-green: #BAC7AB;
+@theme-black-color: #222222;
+
 .main-content{
-  .body-section {
+  .members-section {
       text-align: center;
-
-      .dashboard-panels {
-          padding: 0;
-          margin: 5px 4%;
-          height: 240px;
-          border: 5px solid black;
-          -webkit-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
-          -moz-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
-          box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
-
-          .dashboard-header {
-              background: @common-links-color;
-              position: relative;
-              top:-40px;
-              display: block;
-              height: 45px;
-              padding: 1px 2px 15px;
-          }
-          //end:dashboard-header
-
-          .dashboard-badge{
-            z-index: 1000;
-            border-radius: 50%;
-            display: inline-block;
-            position: relative;
-            top:-20px;
-            left: 95px;
-            width: 35px;
-            height: 35px;
+      .search-members-section{
+        padding: 0;
+        // border: 1px solid orange;
+        height:250px;
+        .search-members-header{
+          text-align: left;
+          display: block;
+          padding: 1px 5px 10px 35px;
+          background: @header-green;
+        }
+        //end:search-members-header
+        .search-members-content{
+          padding: 5px 0px;
+          .btn-black{
+            border: none;
             background: @theme-black-color;
           }
-
-          .dashboard-content {
-              padding: 10px 0;
-          }
-          //end:dashboard-content
+        }
+        //end:search-members-content
       }
-      //end:dashboard-panels
+      //end:search-members-section
   }
-  //end:body-section
+  //end:members-section
 }
 //end:main-content
