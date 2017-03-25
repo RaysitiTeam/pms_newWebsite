@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="pms-app">
 
 <head>
     <meta charset="UTF-8">
@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body ng-controller="MembersController">
     <!-- navigation template -->
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -34,7 +34,7 @@
                 <img src="images/avatar/doctor.png" alt="Doctor avatar">
             </div>
             <div class="navbar-avatar-title">
-                <p>Welcome Dr. Jack Shepherd</p>
+                <p ng-bind="doctorName"></p>
             </div>
             <div>
                 <ul class="nav navbar-nav navbar-right">
@@ -586,11 +586,11 @@
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/bootstrap/js/dropdown.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-smart-table/dist/smart-table.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/ngstorage/ngStorage.js"></script>
     <!-- endbower -->
@@ -600,6 +600,10 @@
     <!-- inject:js -->
     <script src="/src/main.js"></script>
     <script src="/src/app/app.module.js"></script>
+    <script src="/src/app/members/Members.controller.js"></script>
+    <script src="/src/app/members/Members.service.js"></script>
+    <script src="/src/app/components/alert-modal/alert-modal.controller.js"></script>
+    <script src="/src/app/components/alert-modal/alert-modal.service.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->

@@ -4,6 +4,7 @@
   "description": "PMS New UI Website",
   "main": "gulpfile.js",
   "scripts": {
+    "postinstall":"bower install",
     "start": "http-server"
   },
   "repository": {
