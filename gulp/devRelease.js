@@ -18,10 +18,26 @@ gulp.task('dev-fonts', function () {
       .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
       .pipe($.flatten())
       .pipe(gulp.dest(path.join(conf.paths.devDist, 'fonts')));
-});
+});//end:dev-fonts
+
+gulp.task('copy-fonts-folder', function () {
+  console.log('Copying fonts folder');
+  return gulp
+  .src(path.join(conf.paths.fontsFolder,'/**/*'))
+      .pipe($.filter('**/*.{eot,svg,ttf,woff,woff2}'))
+      .pipe($.flatten())
+      .pipe(gulp.dest(path.join(conf.paths.dist, 'fonts')));
+});//end:copy-fonts-folder
+
+gulp.task('copy-images-folder',function(){
+  console.log('Copying images folder');
+  return gulp
+  .src(path.join(conf.paths.imagesFolder,'/**/*'))
+  .pipe(gulp.dest(path.join(conf.paths.dist,'images')));
+});//end:copy-images-folder
 
 //New Optimized task to inject all build files
-gulp.task('optimize',['inject'],function(){
+gulp.task('optimize',['inject','copy-images-folder','copy-fonts-folder'],function(){
   console.log('Optimize the js,css,html');
   return gulp
     .src(conf.paths.allHTMLFiles)
