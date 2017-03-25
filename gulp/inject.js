@@ -18,7 +18,7 @@ gulp.task( 'inject-reload', [ 'inject' ], function () {
 
 gulp.task('injectStyles',['styles'],function(){
   return gulp
-    .src(conf.paths.htmlFiles)
+    .src(conf.paths.allHTMLFiles)
     .pipe($.inject(gulp.src(conf.paths.css))) //this will use gulp-inject and inject files
     .pipe(gulp.dest(conf.paths.client));
 });//end:inject

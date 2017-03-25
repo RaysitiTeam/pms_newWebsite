@@ -44,7 +44,7 @@ gulp.task('wiredep',function(){
   var options = config.getWiredepDefaultOptions(); //TODO: configure getWiredepDefaultOptions
   var wiredep = require('wiredep').stream; // that is going to get the stream
   return gulp
-    .src(config.paths.htmlFiles)
+    .src(config.paths.allHTMLFiles)
     .pipe(wiredep(options)) // this will look into bower.json
     // .pipe($.inject(gulp.src(config.js))) //this will use gulp-inject and inject files
     .pipe(gulp.dest(config.paths.client));
