@@ -2,7 +2,10 @@
 
 var path = require('path');
 var gulp = require('gulp');
+var $ = require('gulp-load-plugins')({lazy:true});
 var conf = require('./config');
+
+var assets = $.useref.assets({searchPath:'./'});
 
 var $ = require('gulp-load-plugins')({
   pattern: ['gulp-*', 'main-bower-files']
@@ -16,6 +19,18 @@ gulp.task('dev-fonts', function () {
       .pipe($.flatten())
       .pipe(gulp.dest(path.join(conf.paths.devDist, 'fonts')));
 });
+
+//New Optimized task to inject all build files
+gulp.task('optimize',['inject'],function(){
+  console.log('Optimize the js,css,html');
+  return gulp
+    .src(conf.paths.allHTMLFiles)
+    .pipe($.plumber()) //Error handling
+    //TODO: processing our files
+    .pipe(assets)
+    .pipe(assets.restore())
+    .pipe(gulp.dest(conf.paths.dist));
+});//end:optimize
 
 gulp.task('dev-copy-lib', function () {
   var assets = require('wiredep')(_.extend({}, conf.wiredep));

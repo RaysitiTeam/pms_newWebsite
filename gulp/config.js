@@ -33,6 +33,7 @@ exports.paths = {
   devDist: 'dev-release',
   tmp: '.tmp',
   htmlFiles:'index.html',
+  allHTMLFiles:'*.html',
   e2e: 'e2e',
   js:[
     clientApp + '**/*.module.js',

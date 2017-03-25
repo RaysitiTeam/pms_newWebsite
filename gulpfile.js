@@ -6,6 +6,7 @@ var $ = require('gulp-load-plugins')({lazy:true});
 var config = require('./gulp/config'); // without the ./ it will look for a PACKAGE named,() to run function
 require('./gulp/inject');
 require('./gulp/server');
+require('./gulp/devRelease');
 
 var jsSources = config.alljs;
 
