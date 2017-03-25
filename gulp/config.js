@@ -33,6 +33,7 @@ exports.paths = {
   devDist: 'dev-release',
   tmp: '.tmp',
   fontsFolder:'fonts',
+  jsonFolder:'data/json',
   data:'data',
   imagesFolder:'images',
   htmlFiles:'index.html',

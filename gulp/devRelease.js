@@ -36,8 +36,15 @@ gulp.task('copy-images-folder',function(){
   .pipe(gulp.dest(path.join(conf.paths.dist,'images')));
 });//end:copy-images-folder
 
+gulp.task('copy-json-folder',function(){
+  console.log('Copying JSON folder');
+  return gulp
+  .src(path.join(conf.paths.jsonFolder,'/**/*'))
+  .pipe(gulp.dest(path.join(conf.paths.dist,'data/json')));
+});//end:copy-images-folder
+
 //New Optimized task to inject all build files
-gulp.task('optimize',['inject','copy-images-folder','copy-fonts-folder'],function(){
+gulp.task('optimize',['inject','copy-images-folder','copy-fonts-folder','copy-json-folder'],function(){
   console.log('Optimize the js,css,html');
   return gulp
     .src(conf.paths.allHTMLFiles)

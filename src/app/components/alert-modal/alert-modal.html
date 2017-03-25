@@ -3,8 +3,18 @@
         <h3 class="modal-title" ng-bind="title"></h3>
     </div>
     <div class="modal-body">
-        <div ng-bind="message" class="text-center"></div>
-
+      <h3 ng-bind="rowObj.memberName"></h3>
+      <hr>
+        <p> <strong>Member ID: </strong> {{rowObj.memberDetails}} </p>
+        <p> <strong>Patient Name: </strong> {{rowObj.patientName}} </p>
+        <p> <strong>Contact Number: </strong>{{rowObj.contactNumber}}</p>
+        <p> <strong>Current Status: </strong>{{rowObj.status}}</p>
+        <p> <strong>Description: </strong>{{rowObj.description}}</p>
+        <p> <strong>Start Date: </strong>{{rowObj.startDate}}</p>
+        <p> <strong>Total Treatment Cost: </strong>{{rowObj.total_treatment_cost}}</p>
+        <p> <strong>Total Installation Payment: </strong>{{rowObj.total_ins_payment}}</p>
+        <p> <strong>Total Co Payment: </strong>{{rowObj.total_co_payment}}</p>
+        <p> <strong>Total Members Payment: </strong>{{rowObj.total_members_payment}}</p>
     </div>
     <div class="modal-footer">
         <div class="col-xs-12 text-center">

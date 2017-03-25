@@ -1,7 +1,7 @@
 (function() {
     angular.module('pms-app')
-        .controller('AlertModalController', function($scope, $uibModalStack, title, message) {
-            $scope.message = message;
+        .controller('AlertModalController', function($scope, $uibModalStack, title, rowObj) {
+            $scope.rowObj = rowObj;
             $scope.title = title;
 
             $scope.onConfirm = function() {
