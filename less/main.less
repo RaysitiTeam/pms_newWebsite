@@ -1,0 +1,230 @@
+@import "core/bootswatch.less";
+@import "core/variables.less"; //CSS Styles for Each page
+@import "pages/dashboard.less";
+@import "pages/members.less";
+@import "pages/treatments.less";
+
+@theme-black-color: #222222;
+@common-links-color: #E2E2E2;
+@common-nav-links-color: #AEAEAE; //main Website content CSS overwriting should come here
+//Common styles
+.center-div {
+    float: none;
+    margin: 0 auto;
+}
+//end:center-div
+
+nav {
+    position: relative;
+    top: 40px;
+
+    .navbar-logo {
+        // border: 1px solid red;
+        position: absolute;
+        top: -33px;
+        left: -1px;
+        width: 300px;
+        height: 120px;
+        background: white;
+    }
+    //end:navbar-logo
+    .navbar-avatar {
+        // border: 1px solid blue;
+        position: absolute;
+        left: 350px;
+        top: -9px;
+        width: 67px;
+        height: 70px;
+        background: white;
+    }
+    //end:navbar-avatar
+    .navbar-avatar-title {
+        position: absolute;
+        text-align: center;
+        top: 10px;
+        left: 425px;
+        line-height: 30px;
+        background: white;
+        // padding: 5px;
+        width: 16%;
+
+        p {
+            position: relative;
+            top: 5px;
+            font-weight: bold;
+        }
+    }
+    //end:navbar-avatar-title
+    img.gear-icon{
+      color: white;
+      fill: white;
+    }
+    //end:img
+    .dropdown-menu{
+      // border: 1px solid red;
+      z-index: 10000;
+    }
+}
+//end:nav
+
+.main-content {
+    // border: 1px solid red;
+    margin: 100px auto 0;
+    //Border shadow for main-content
+    -webkit-box-shadow: 0 6px 16px -1px rgba(0,0,0,0.33);
+    -moz-box-shadow: 0 6px 16px -1px rgba(0,0,0,0.33);
+    box-shadow: 0 6px 16px -1px rgba(0,0,0,0.33);
+
+    div.common-links {
+        height: 120px;
+        position: relative;
+        bottom: 0;
+        background: @common-links-color;
+
+        div.common-nav-links {
+            text-align: center;
+            padding: 5px 0 30px;
+            height: 110px;
+            position: relative;
+            bottom: 0;
+            background: @common-nav-links-color;
+
+            div.common-navigation-menu {
+                // border: 1px solid green;
+                float: none;
+                height: 100px;
+                margin: 0 auto;
+                padding: 0px;
+                text-align: center;
+
+                ul {
+                    // border: 1px solid green;
+                    display: inline-block;
+                    padding-right: 20px;
+                    margin: 0 auto;
+                    text-align: center;
+                    list-style: none;
+
+                    li {
+                        float: left;
+                        margin: 0 10px 0 0;
+
+                        span {
+                            display: inline-block;
+                            position: relative;
+                            top: 20px;
+                            margin-right: 5px;
+                            padding: 5px;
+                            width: 50px;
+                            height: 50px;
+                            background: @theme-black-color;
+                        }
+
+                        a {
+                            position: relative;
+                            top: 20px;
+                            color: @theme-black-color;
+                        }
+                    }
+                    //end:li
+                }
+                //end:ul
+            }
+            //end:common-navigation-menu
+        }
+        //end:common-nav-links
+    }
+    //end:common-links
+    //All CSS related to sidebar
+    aside.main-sidebar {
+        margin: 0;
+        margin-top: -40px;
+        padding: 0;
+        z-index: 1000;
+
+        div.sidebar-header {
+            cursor: pointer;
+            font-size: 20px;
+            background: @theme-black-color;
+            padding: 10px 15px;
+            color: white;
+
+            .menu-navigation-icon {
+                display: inline-block;
+                top: 4px;
+                margin: 0 15px;
+            }
+            //end:menu-navigation-icon
+        }
+        //end:sidebar-header
+        div.sidebar-navigation {
+            // border: 1px solid red;
+            background: @common-links-color;
+            -webkit-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+            -moz-box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+            box-shadow: 10px 10px 30px -12px rgba(0,0,0,0.75);
+
+            .sidebar-list {
+                list-style: none;
+                padding: 0;
+
+                .sidebar-list-items {
+                    // border: 1px solid orange;
+                    display: block;
+
+                    a {
+                        // border-bottom: 1px solid red;
+                        color: @theme-black-color;
+                        padding: 0 10px;
+                        display: block;
+                        border-bottom: 1px solid @theme-black-color;
+
+                        .sidebar-list-item-icon {
+                            display: inline-block;
+                            background: white;
+                            margin: 0;
+                            padding: 15px;
+                            // border-bottom: 1px solid @theme-black-color;
+                        }
+                        //end:sidebar-list-item-icon
+
+                        .sidebar-list-item-title {
+                            display: inline-block;
+                            margin: 0;
+                            padding: 15px 0;
+                        }
+                        //end:sidebar-list-item-title
+
+                        &:hover {
+                            list-style: none;
+                            background: @common-nav-links-color;
+                        }
+                        //end:&:hover
+                    }
+                    //end:a list
+                }
+                //end:sidebar-list-items
+            }
+            //end:sidebar-list
+        }
+        //end:sidebar-navigation
+    }
+    //end:main-sidebar
+}
+//end:main-content
+
+footer.footer-section {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    background: @theme-black-color;
+    text-align: center;
+    color: white;
+
+    p {
+        margin: 15px auto;
+    }
+    //p
+}
+//end:footer

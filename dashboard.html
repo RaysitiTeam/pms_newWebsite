@@ -8,14 +8,14 @@
     <title>PMS Medical Website</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- build:css styles/lib.css -->
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css styles/app.css -->
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/.tmp/main.css">
     <!-- endinject -->
@@ -39,7 +39,7 @@
             <div>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img class="gear-icon" src="images/icons/svg/020-settings.svg"/></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Gear Icon <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
@@ -61,7 +61,7 @@
         <div>
             <aside class="col-lg-3 main-sidebar">
                 <div class="sidebar-header">
-                    <span class="menu-navigation-icon glyphicon glyphicon-align-justify"></span><span class="loginDashboard">Login/Dashboard</span>
+                    <span class="menu-navigation-icon glyphicon glyphicon-align-justify"></span>Login/Dashboard
                 </div>
                 <div class="sidebar-navigation">
                     <ul class="sidebar-list">
@@ -121,9 +121,7 @@
                 <div class="col-lg-12 center-div">
                   <!-- dashboard-panels -->
                   <div class="col-md-2 dashboard-panels">
-                    <span class="dashboard-badge">
-                      <img class="add-icon" src="images/icons/svg/003-add.svg" alt="add">
-                    </span>
+                    <span class="dashboard-badge"></span>
                     <div class="dashboard-header">
                       <h4>MEMBERS:1920</h4>
                     </div>
@@ -136,9 +134,7 @@
                   </div><!-- end:dashboard-panels -->
                   <!-- dashboard-panels -->
                   <div class="col-md-2 dashboard-panels">
-                    <span class="dashboard-badge">
-                      <img class="add-icon" src="images/icons/svg/001-rubbish-bin.svg" alt="trash">
-                    </span>
+                    <span class="dashboard-badge"></span>
                     <div class="dashboard-header">
                       <h4>MEMBERS:1920</h4>
                     </div>
@@ -151,9 +147,7 @@
                   </div><!-- end:dashboard-panels -->
                   <!-- dashboard-panels -->
                   <div class="col-md-2 dashboard-panels">
-                    <span class="dashboard-badge">
-                      <img class="add-icon" src="images/icons/svg/002-eye.svg" alt="trash">
-                    </span>
+                    <span class="dashboard-badge"></span>
                     <div class="dashboard-header">
                       <h4>MEMBERS:1920</h4>
                     </div>
@@ -166,9 +160,7 @@
                   </div><!-- end:dashboard-panels -->
                   <!-- dashboard-panels -->
                   <div class="col-md-2 dashboard-panels">
-                    <span class="dashboard-badge">
-                      <img class="add-icon" src="images/icons/svg/002-eye.svg" alt="trash">
-                    </span>
+                    <span class="dashboard-badge"></span>
                     <div class="dashboard-header">
                       <h4>MEMBERS:1920</h4>
                     </div>
@@ -188,7 +180,7 @@
                   <h3><strong>Search...</strong></h3>
                   <div class="col-lg-2"></div>
                   <div class="col-lg-8">
-                    <input type="text" class="search-bar form-control" placeholder="Seach Member ID"/>
+                    <input type="text" class="form-control" placeholder="Seach Member ID"/>
                   </div>
                 </div>
                 <!-- end:search-section -->
@@ -199,59 +191,15 @@
             <div>&nbsp;</div>
             <div>&nbsp;</div>
         </div>
-        <div class="row common-links">
+        <div class="common-links">
             <div class="common-nav-links">
-                <div class="col-lg-12 common-navigation-menu">
+                <div class="col-lg-6 common-navigation-menu">
                     <p>
                         <ul>
-                          <li>
-                            <span>
-                              <img src="images/icons/svg/019-people.svg" alt="appointment-icon">
-                            </span>
-                            <a href="#">Appointments</a>
-                          </li>
-                          <li>
-                            <span>
-                              <img src="images/icons/svg/009-smartphone.svg" alt="sms-icon">
-                            </span>
-                            <a href="#">SMS</a>
-                          </li>
-                          <li>
-                            <span>
-                              <img src="images/icons/svg/021-message_white.svg" alt="email-icon">
-                            </span>
-                            <a href="#">Email</a>
-                          </li>
-                          <li>
-                            <span>
-                              <img src="images/icons/svg/006-birthday-cake.svg" alt="birthday-icon">
-                            </span>
-                            <a href="#">Patient's Birthdays</a>
-                          </li>
-                          <li>
-                            <span>
-                              <img src="images/icons/svg/011-calendar.svg" alt="calendar-icon">
-                            </span>
-                            <a href="#">Calender</a>
-                          </li>
-                            <li>
-                              <span>
-                                <img src="images/icons/svg/005-notification-bell.svg" alt="notification-icon">
-                              </span>
-                              <a href="#">Notifications</a>
-                            </li>
-                              <li>
-                                <span>
-                                  <img src="images/icons/svg/007-business.svg" alt="business-icon">
-                                </span>
-                                <a href="#">Contacts</a>
-                              </li>
-                              <li>
-                                <span>
-                                  <img src="images/icons/svg/010-cash.svg" alt="cash-icon">
-                                </span>
-                                <a href="#">Payments</a>
-                              </li>
+                            <li><span></span><a href="#">Patient's Birthdays</a></li>
+                            <li><span></span><a href="#">Calender</a></li>
+                            <li><span></span><a href="#">Notifications</a></li>
+                            <li><span></span><a href="#">Contacts</a></li>
                         </ul>
                     </p>
                 </div>
@@ -265,7 +213,7 @@
         <p>&copy; Design by RAYSITI</p>
     </footer>
 
-    <!-- build:js scripts/lib.js -->
+    <!-- build:js(src) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
@@ -280,7 +228,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js scripts/app.js -->
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="/src/main.js"></script>
     <script src="/src/app/app.module.js"></script>
