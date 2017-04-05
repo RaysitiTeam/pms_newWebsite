@@ -48,6 +48,13 @@ gulp.task('serve', ['watch'], function () {
   browserSyncInit(conf.paths.main);
 });
 
+gulp.task('serve:release', ['watch', 'release'], function() {
+    browserSync.init({
+        server: '.',
+        startPath: '/release/',
+    });
+});
+
 gulp.task('watch',['inject'], function(){
   gulp.watch([conf.paths.watchLess],['styles']); // 2 param arrays - source array and task array
   gulp.watch([conf.paths.src],['inject']); // 2 param arrays - source array and task array

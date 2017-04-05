@@ -2,6 +2,8 @@
   angular.module('pms-app')
   .service('MemberService',MemberService);
   MemberService.$inject=['$http'];
+  
+  /** @ngInject */
   function MemberService($http){
     return{
       getAllMembersList:getAllMembersList

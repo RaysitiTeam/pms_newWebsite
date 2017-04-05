@@ -21,6 +21,7 @@ exports.paths = {
   css:temp+'/*.css',
   watchLess:[
     lessFolder + '/main.less', //creating less files for each page
+    lessFolder + '/alert-modal.less', //creating less files for each page
     lessFolder + '/pages/*.less' //creating less files for each page
   ],
   less:[
@@ -81,3 +82,11 @@ exports.errorHandler = function(title) {
     this.emit('end');
   };
 };
+
+//errorLogger function
+exports.errorLogger =function (error){
+  log('***Start of Error***');
+  log(error);
+  log('***End of Error***');
+  this.emit('end'); // This will end the pipe and give some info
+};//end:errorLogger

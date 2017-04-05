@@ -1,6 +1,6 @@
 (function() {
     angular.module('pms-app')
-        .factory('AlertModalService', function($uibModal) {
+        .factory('AlertModalService', function($uibModal,$templateCache) {
             var service = {};
             service.confirm = function(title, rowObj) {
                 var modalInstance = $uibModal.open({
@@ -8,6 +8,8 @@
                     size: 'md',
                     templateUrl: 'src/app/components/alert-modal/alert-modal.html',
                     controller: 'AlertModalController',
+                    backdrop  : 'static',
+                    keyboard  : false,
                     resolve: {
                         title: function() {
                             return title;

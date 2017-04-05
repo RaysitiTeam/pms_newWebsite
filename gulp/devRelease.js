@@ -5,6 +5,10 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')({lazy:true});
 var conf = require('./config');
 
+
+//NOTE: the following will replace src/bower_components with just bower_components
+//var transform = $.useref({ transformPath: function(filePath) { return filePath.replace('src/bower_components','bower_components') } });
+
 var assets = $.useref.assets({searchPath:'./'});
 
 var $ = require('gulp-load-plugins')({
@@ -44,14 +48,15 @@ gulp.task('copy-json-folder',function(){
 });//end:copy-images-folder
 
 //New Optimized task to inject all build files
-gulp.task('optimize',['inject','copy-images-folder','copy-fonts-folder','copy-json-folder'],function(){
+gulp.task('release',['injectAll','copy-images-folder','copy-fonts-folder','copy-json-folder'],function(){
   console.log('Optimize the js,css,html');
   return gulp
     .src(conf.paths.allHTMLFiles)
     .pipe($.plumber()) //Error handling
     //TODO: processing our files
-    .pipe(assets)
-    .pipe(assets.restore())
+    .pipe(assets) // This line is required with the top var assets to concatenate all css and js into scripts and styles.
+    .pipe(assets.restore()) //This line is required to concatenate all css and js into styles and scripts
+    .pipe($.useref()) // This line is required to change the links of index.html to lib and app.css/js
     .pipe(gulp.dest(conf.paths.dist));
 });//end:optimize
 

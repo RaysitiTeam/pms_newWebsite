@@ -5,6 +5,7 @@ var $ = require('gulp-load-plugins')({lazy:true});
 //Importing Gulp tasks & variables
 var config = require('./gulp/config'); // without the ./ it will look for a PACKAGE named,() to run function
 require('./gulp/inject');
+require('./gulp/build');
 require('./gulp/server');
 require('./gulp/devRelease');
 
@@ -45,6 +46,7 @@ gulp.task('wiredep',function(){
   var wiredep = require('wiredep').stream; // that is going to get the stream
   return gulp
     .src(config.paths.allHTMLFiles)
+    .pipe($.plumber()) //Error handling
     .pipe(wiredep(options)) // this will look into bower.json
     // .pipe($.inject(gulp.src(config.js))) //this will use gulp-inject and inject files
     .pipe(gulp.dest(config.paths.client));

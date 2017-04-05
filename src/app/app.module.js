@@ -2,7 +2,7 @@
   angular.module('pms-app',
   [
     //Angular modules
-    'ngAnimate',
+    'ngAnimate',    
     //Third part modules
     'ui.bootstrap',
     'smart-table'

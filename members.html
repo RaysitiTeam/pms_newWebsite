@@ -8,14 +8,14 @@
     <title>PMS Medical Website</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- build:css styles/lib.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.css" />
     <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- build:css styles/app.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/.tmp/main.css">
     <!-- endinject -->
@@ -188,6 +188,7 @@
             <!-- TODO: PAJ - Complete Members list table -->
             <div class="col-lg-12 members-table" st-table="smartTableData" st-safe-src="smartTableDataList">
                 <div class="members-headers">
+                  <!-- @ngInject -->
                   <div st-pagination="" st-items-by-page="smartTablePageSize" st-displayed-pages="5" st-template="src/app/members/paginationTemplate.html"></div>
                 </div>
                 <!-- end:members-headers -->
@@ -271,7 +272,7 @@
                       </tr>
                       <tfoot class="center-div-td">
                           <tr>
-                              <td colspan="10">                                  
+                              <td colspan="10">
                               </td>
                           </tr>
                       </tfoot>
@@ -360,7 +361,7 @@
         <p>&copy; Design by RAYSITI</p>
     </footer>
 
-    <!-- build:js(src) scripts/vendor.js -->
+    <!-- build:js scripts/lib.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/jquery-ui/jquery-ui.js"></script>
@@ -375,7 +376,7 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- build:js scripts/app.js -->
     <!-- inject:js -->
     <script src="/src/main.js"></script>
     <script src="/src/app/app.module.js"></script>
@@ -386,7 +387,7 @@
     <!-- endinject -->
 
     <!-- inject:partials -->
-    <!-- angular templates will be automatically converted in js and inserted here -->
+    <script src=".tmp/partials/templateCacheHtml.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 </body>

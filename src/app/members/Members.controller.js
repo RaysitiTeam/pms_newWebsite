@@ -1,8 +1,10 @@
 (function(){
   angular.module('pms-app')
   .controller('MembersController',MembersController);
-  MembersController.$inject=['$scope','AlertModalService','MemberService'];
-  function MembersController($scope,AlertModalService,MemberService){
+  MembersController.$inject=['$scope','AlertModalService','MemberService','$templateCache'];
+
+  /** @ngInject */
+  function MembersController($scope,AlertModalService,MemberService,$templateCache){
     var vm = $scope;
     vm.smartTablePageSize = 5;
     vm.doctorName="Welcome Dr. Jack Shepherd";
