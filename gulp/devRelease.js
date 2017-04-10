@@ -60,6 +60,19 @@ gulp.task('release',['injectAll','copy-images-folder','copy-fonts-folder','copy-
     .pipe(gulp.dest(conf.paths.dist));
 });//end:optimize
 
+//New Optimized task to inject all build files
+gulp.task('release:jquery',['inject','copy-images-folder','copy-fonts-folder'],function(){
+  console.log('Building a jQuery version');
+  return gulp
+    .src(conf.paths.allHTMLFiles)
+    .pipe($.plumber()) //Error handling
+    //TODO: processing our files
+    .pipe(assets) // This line is required with the top var assets to concatenate all css and js into scripts and styles.
+    .pipe(assets.restore()) //This line is required to concatenate all css and js into styles and scripts
+    .pipe($.useref()) // This line is required to change the links of index.html to lib and app.css/js
+    .pipe(gulp.dest(conf.paths.dist));
+});//end:optimize
+
 gulp.task('dev-copy-lib', function () {
   var assets = require('wiredep')(_.extend({}, conf.wiredep));
   var srcList = [];
